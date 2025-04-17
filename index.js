@@ -8,7 +8,7 @@ const firmRoutes = require('./routes/firmRoutes');
 const productRoutes = require('./routes/productRoutes');
 const cors = require('cors');
 const path = require('path');
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 dotEnv.config();
 
@@ -28,6 +28,6 @@ app.listen(PORT, () =>{
     console.log(`server started and running : ',${PORT}`)
 })
 
-app.use('/home', (req, res) =>{
+app.use('/', (req, res) =>{
     res.send("<h1> Welcome to SUBY</h1>")
 })
