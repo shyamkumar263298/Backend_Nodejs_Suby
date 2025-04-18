@@ -11,6 +11,7 @@ const path = require('path');
 const PORT = process.env.PORT || 4000;
 
 dotEnv.config();
+app.use(cors());
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("Mongodb connect successfully"))

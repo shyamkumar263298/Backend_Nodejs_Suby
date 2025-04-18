@@ -9,6 +9,7 @@ const secretKey = process.env.WhatIsYourName
 
 
 const vendorRegister = async (req, res) => {
+    debugger
     const {username, email, password} = req.body;
     try{
         const vendorEmail = await Vendor.findOne({email});
